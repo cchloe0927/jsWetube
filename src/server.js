@@ -6,14 +6,13 @@ import videoRouter from "./routers/videoRouter";
 
 const PORT = 4000; //4000서버사용
 
-console.log(process.cwd());
-
 const app = express(); //서버연결
 const logger = morgan("dev");
 
 app.set("view engine", "pug");
 app.set("views", process.cwd() + "/src/views");
 app.use(logger);
+app.use(express.urlencoded({ extended: true })); //HTML form을 이해하고 jsObject 형식으로 통역해줌
 app.use("/", globalRouter);
 app.use("/videos", videoRouter);
 app.use("/users", userRouter);

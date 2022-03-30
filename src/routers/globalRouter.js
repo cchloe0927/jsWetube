@@ -7,7 +7,6 @@ const globalRouter = express.Router();
 globalRouter.get("/", trending);
 globalRouter.get("/join", join);
 globalRouter.get("/login", login);
-globalRouter.get("/search", search);
 
 //서버로 익스포트 해줘야 서버에서 임포트 할 수 있음
 export default globalRouter;
