@@ -1,0 +1,13 @@
+doctype html
+html(lang="ko")
+    head
+        title #{pageTitle} | Wetube
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+    body
+        header
+            h1=pageTitle
+        main
+            block content
+    include partials/footer.pug
+//- include(고정) -> 다른 파일을 포함시킴
+//- block(수정) -> 다른 Pug 파일들이 내용을 채울 공간 마련해줌

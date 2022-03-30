@@ -1,0 +1,12 @@
+extends base.pug
+include mixins/video.pug
+
+block content
+    h2 Wlcome here you will see the trending videos
+    each x in videos
+        +video(x)
+    else
+        li Sorry nothing found.
+
+//- mixin을 통해 videos데이터(videoCotroller의 videos array)를 받아와서
+//- 변수명(보낼 데이터) ex) +video(potato)
